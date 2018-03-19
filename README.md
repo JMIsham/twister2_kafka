@@ -15,7 +15,7 @@ Running Kafka job
     ./bin/kafka-topics.sh --list \
         --zookeeper localhost:2181
 3. compile and build the twister2 and extract twister2client
-4 run the samlple with following command
+4. run the samlple with following command
   ./bin/twister2 submit nodesmpi jar examples/libexamples-java.jar edu.iu.dsc.tws.examples.basic.kafka.KafkaClientJob
   
 
