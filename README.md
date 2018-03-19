@@ -12,7 +12,6 @@ Running Kafka job
         --partitions 13 \
         --topic sample_topic1 \
         --zookeeper  localhost:2181
-    ## List created topics
     ./bin/kafka-topics.sh --list \
         --zookeeper localhost:2181
 3. compile and build the twister2 and extract twister2client
