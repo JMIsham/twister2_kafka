@@ -1,15 +1,23 @@
 # Twister2
 
-Twister2 is a big data tool kit supporting different parallel computing 
-paradigms for big data applications. Twister2 models a parallel computation as a graph. Depending on the requirements the graph can be deployed, executed with different choices making Twister2 capable of running different applications including classic parallel computing, data parallel, streaming or function as a service applications.
+This is a  temporary test kafka job for twister2.
 
-The detailed desing of Twister2 can be found at
+Running Kafka job
+-------------------
 
-[Twister2 Design](http://dsc.soic.indiana.edu/publications/twister2_design_big_data_toolkit.pdf)
+1. install and start kafka server 
+2. create a topic with topic name sample_topic1 (run the following command)
+      ./bin/kafka-topics.sh --create \
+        --replication-factor 1 \
+        --partitions 13 \
+        --topic sample_topic1 \
+        --zookeeper  localhost:2181
+    ## List created topics
+    ./bin/kafka-topics.sh --list \
+        --zookeeper localhost:2181
+3. compile and build the twister2 and extract twister2client
+4 run the samlple with following command
+  ./bin/twister2 submit nodesmpi jar examples/libexamples-java.jar edu.iu.dsc.tws.examples.basic.kafka.KafkaClientJob
+  
 
-We use Jira for tracking the progress of twister2.
-
-[Jira](https://twister2.atlassian.net)
-
-The google groups mailing list can be used to ask questions and discussions "twister2@googlegroups.com"
-
+  
